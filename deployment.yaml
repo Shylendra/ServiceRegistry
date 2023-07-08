@@ -47,10 +47,10 @@ spec:
         resources:
           requests:
             memory: "1Gi"
-              cpu: "500m"
-            limits:
-              memory: "1200Mi"
-              cpu: "500m"            
+            cpu: "500m"
+          limits:
+            memory: "1200Mi"
+            cpu: "500m"            
         env:
         - name: EUREKA_SERVER_ADDRESS
           valueFrom:

@@ -1,16 +1,16 @@
 server:
-   port: 8761
+  port: 8761
 spring:
-   application:
-      name: SERVICE-REGISTRY
-   cloud:
-      config:
-         enabled: false   
+  application:
+    name: SERVICE-REGISTRY
+  cloud:
+    config:
+      enabled: false   
 eureka:
-   instance:
-      hostname: "${HOSTNAME}.eureka"
-   client:
-      register-with-eureka: false
-      fetch-registry: false   
-      serviceUrl:
-         defaultZone: ${EUREKA_SERVER_ADDRESS}
+  instance:
+    hostname: "${HOSTNAME}.eureka"
+  client:
+    register-with-eureka: false
+    fetch-registry: false   
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_ADDRESS}

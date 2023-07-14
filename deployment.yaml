@@ -16,8 +16,8 @@ metadata:
 spec:
   clusterIP: None
   ports:
-  - port: 8761
-    name: eureka
+    - port: 8761
+      name: eureka
   selector:
     app: eureka
 
@@ -39,24 +39,24 @@ spec:
         app: eureka
     spec:
       containers:
-      - name: eureka
-        image: shylendra2015/service-registry:latest
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8761
-        resources:
-          requests:
-            memory: "1Gi"
-            cpu: "500m"
-          limits:
-            memory: "1200Mi"
-            cpu: "500m"            
-        env:
-        - name: EUREKA_SERVER_ADDRESS
-          valueFrom:
-            configMapKeyRef:
-              name: eureka-cm
-              key: eureka_service_address
+        - name: eureka
+          image: shylendra2015/service-registry:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8761
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "500m"
+            limits:
+              memory: "1200Mi"
+              cpu: "500m"            
+          env:
+            - name: EUREKA_SERVER_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: eureka-cm
+                  key: eureka_service_address
 
 
 ---                  
@@ -72,6 +72,6 @@ spec:
     app: eureka
   type: NodePort
   ports:
-  - port: 8761
-    nodePort: 30030
-    name: eureka
+    - port: 8761
+      nodePort: 30030
+      name: eureka

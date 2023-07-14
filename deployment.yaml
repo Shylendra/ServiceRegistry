@@ -56,7 +56,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: eureka-cm
-                  key: eureka_service_address
+                  key: eureka_service_addresss
 
 
 ---                  

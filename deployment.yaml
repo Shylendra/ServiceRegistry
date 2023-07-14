@@ -72,6 +72,5 @@ spec:
     app: eureka
   type: NodePort
   ports:
-    - port: 8761
-      nodePort: 30030
-      name: eureka
+    - port: 80
+      targetPort: 8761

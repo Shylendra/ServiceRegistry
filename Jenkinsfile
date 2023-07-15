@@ -27,8 +27,6 @@ pipeline {
                 }            
             }
         }
-        stage('Stage 5 - Deploy to k8s - Do Manual deploy'){
-        }
    }
     post {
         always {

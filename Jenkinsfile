@@ -27,12 +27,7 @@ pipeline {
                 }            
             }
         }
-        stage('Stage 5 - Deploy to k8s'){
-            steps{
-                script{
-                    kubernetesDeploy (configs: 'deployment.yml', kubeconfigId: 'KubernetesConfigPwd')
-                }
-            }
+        stage('Stage 5 - Deploy to k8s - Do Manual deploy'){
         }
    }
     post {

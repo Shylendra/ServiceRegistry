@@ -53,7 +53,7 @@ spec:
               cpu: "500m"            
           env:
             - name: EUREKA_SERVER_ADDRESS
-            - valueFrom:
+              valueFrom:
                 configMapKeyRef:
                   name: eureka-cm
                   key: eureka_service_address

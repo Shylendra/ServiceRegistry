@@ -29,7 +29,9 @@ pipeline {
         }
         stage('Stage 5 - Deploy to k8s'){
             steps{
-            	bat 'C:/1_ShylendraLab/minikube-deploy/api-gateway-deployment.bat'
+            	withKubeConfig([credentialsId: 'KubernetesConfigPwdCLI', serverUrl: 'https://127.0.0.1:52686']) {
+            		bat 'C:/1_ShylendraLab/minikube-deploy/api-gateway-deployment.bat'
+            	}
             }
         }
         /*

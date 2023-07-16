@@ -27,6 +27,7 @@ pipeline {
                 }            
             }
         }
+        /*
         stage('Stage 5 - Deploy to k8s'){
             steps{
             	withKubeConfig([credentialsId: 'shylendra.tm@gmail.com', serverUrl: 'https://127.0.0.1:52686']) {
@@ -34,15 +35,15 @@ pipeline {
             	}
             }
         }
-        /*
+        */
         stage('Stage 5 - Deploy to k8s'){
             steps{
                 script{
-                    kubernetesDeploy (configs: 'deployment.yml', kubeconfigId: 'KubernetesConfigPwd')
+                    //kubernetesDeploy (configs: 'deployment.yml', kubeconfigId: 'KubernetesConfigPwd')
+                    kubernetesDeploy (configs: 'deployment.yml')
                 }
             }
         }
-        */
    }
     post {
         always {

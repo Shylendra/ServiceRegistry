@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Stage 5 - Deploy to k8s'){
             steps{
-            	kubeconfig(caCertificate: '''MIIDBjCCAe6gAwIBAgIBATANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwptaW5p
+            	kubeconfig(credentialsId: 'KubernetesConfigPwdCLI', caCertificate: '''MIIDBjCCAe6gAwIBAgIBATANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwptaW5p
 a3ViZUNBMB4XDTIzMDYyODA4NTQxM1oXDTMzMDYyNjA4NTQxM1owFTETMBEGA1UE
 AxMKbWluaWt1YmVDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMfY
 lNW1UvRJDKLgxC7Srj3sLnyWd6tUB8VxQOvzIx4geA7Fd0ekEDFSTZ7tnVP5YFtt

@@ -36,6 +36,7 @@ pipeline {
             }
         }
         */
+        /*
         stage('Stage 5 - Deploy to k8s'){
             steps{
                 script{
@@ -44,6 +45,7 @@ pipeline {
                 }
             }
         }
+        */
    }
     post {
         always {

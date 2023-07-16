@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Stage 5 - Deploy to k8s'){
             steps{
-                bat 'C:\1_ShylendraLab\minikube-deploy\kubectl\api-gateway-deployment.bat'
+                bat 'C:/1_ShylendraLab/minikube-deploy/api-gateway-deployment.bat'
             }
         }
         /*
